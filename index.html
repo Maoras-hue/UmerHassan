@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Dada & Lala — Since Day One</title>
+<title>Dada & Lala — Written by Lala</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Caveat:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
@@ -29,13 +29,7 @@
     line-height: 1.65;
   }
 
-  /* ---------- Background ---------- */
-  .bg {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    overflow: hidden;
-  }
+  .bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; }
   .bg::after {
     content: '';
     position: absolute;
@@ -60,7 +54,6 @@
     66%      { transform: translate(-40px, 50px) scale(0.95); }
   }
 
-  /* ---------- Nav ---------- */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -81,11 +74,7 @@
     color: var(--text);
   }
   .logo span { color: var(--accent); }
-  nav ul {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
+  nav ul { display: flex; gap: 2rem; list-style: none; }
   nav a {
     color: var(--muted);
     text-decoration: none;
@@ -94,7 +83,6 @@
   }
   nav a:hover { color: var(--accent); }
 
-  /* ---------- Hero ---------- */
   .hero {
     min-height: 100vh;
     padding: 8rem 6vw 4rem;
@@ -123,7 +111,7 @@
     font-size: clamp(2.8rem, 9vw, 7rem);
     line-height: 0.95;
     letter-spacing: -3px;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     opacity: 0;
     animation: fadeUp 1s 0.4s forwards;
   }
@@ -153,18 +141,17 @@
     opacity: 0;
     animation: fadeUp 1s 0.6s forwards;
   }
-  .hero .real-names strong {
-    color: var(--text);
-    font-weight: 700;
-  }
+  .hero .real-names strong { color: var(--text); font-weight: 700; }
 
   .hero p {
-    max-width: 560px;
+    max-width: 620px;
     color: var(--muted);
     font-size: 1.05rem;
     opacity: 0;
     animation: fadeUp 1s 0.8s forwards;
   }
+  .hero p em { color: var(--text); font-style: normal; font-weight: 600; }
+
   .hero .scroll-cue {
     position: absolute;
     bottom: 2.5rem;
@@ -194,12 +181,7 @@
     to   { opacity: 1; transform: translateY(0); }
   }
 
-  /* ---------- Sections ---------- */
-  section {
-    padding: 7rem 6vw;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  section { padding: 7rem 6vw; max-width: 1200px; margin: 0 auto; }
   .section-label {
     font-family: 'Caveat', cursive;
     font-size: 1.6rem;
@@ -221,7 +203,28 @@
     color: transparent;
   }
 
-  /* ---------- Story blocks ---------- */
+  /* Letter-style intro */
+  .letter-intro {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 5rem 6vw;
+    font-family: 'Caveat', cursive;
+    font-size: clamp(1.4rem, 3.2vw, 1.9rem);
+    line-height: 1.55;
+    color: var(--text);
+  }
+  .letter-intro p { margin-bottom: 1.5rem; }
+  .letter-intro p em {
+    color: var(--accent);
+    font-style: italic;
+  }
+  .letter-intro .sign {
+    text-align: right;
+    font-size: 1.7rem;
+    color: var(--accent);
+    margin-top: 2rem;
+  }
+
   .story-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -255,12 +258,8 @@
     margin-bottom: 0.7rem;
     letter-spacing: -0.5px;
   }
-  .story-card p {
-    color: var(--muted);
-    font-size: 0.95rem;
-  }
+  .story-card p { color: var(--muted); font-size: 0.95rem; }
 
-  /* ---------- Nickname banner ---------- */
   .nickname-band {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -308,19 +307,11 @@
     opacity: 0.7;
   }
   @media (max-width: 640px) {
-    .nickname-band {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
+    .nickname-band { grid-template-columns: 1fr; gap: 1rem; }
     .nick-arrow { transform: rotate(90deg); }
   }
 
-  /* ---------- Memory list ---------- */
-  .memory-list {
-    list-style: none;
-    display: grid;
-    gap: 1rem;
-  }
+  .memory-list { list-style: none; display: grid; gap: 1rem; }
   .memory-list li {
     display: flex;
     gap: 1rem;
@@ -346,12 +337,8 @@
     margin-bottom: 0.2rem;
     font-weight: 600;
   }
-  .memory-list span {
-    color: var(--muted);
-    font-size: 0.92rem;
-  }
+  .memory-list span { color: var(--muted); font-size: 0.92rem; }
 
-  /* ---------- Big quote ---------- */
   .big-quote {
     text-align: center;
     padding: 6rem 6vw;
@@ -375,7 +362,6 @@
     font-family: 'Inter', sans-serif;
   }
 
-  /* ---------- Stats ---------- */
   .stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -400,14 +386,8 @@
     line-height: 1;
     letter-spacing: -2px;
   }
-  .stat .label {
-    color: var(--muted);
-    font-size: 0.85rem;
-    margin-top: 0.6rem;
-    letter-spacing: 0.5px;
-  }
+  .stat .label { color: var(--muted); font-size: 0.85rem; margin-top: 0.6rem; letter-spacing: 0.5px; }
 
-  /* ---------- Footer ---------- */
   footer {
     text-align: center;
     padding: 4rem 6vw 3rem;
@@ -421,22 +401,14 @@
     color: var(--accent);
     margin-bottom: 0.5rem;
   }
-  footer .real {
-    font-size: 0.85rem;
-    color: var(--muted);
-    margin-bottom: 1rem;
-  }
+  footer .real { font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem; }
 
-  /* ---------- Reveal ---------- */
   .reveal {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.9s ease, transform 0.9s ease;
   }
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
 
   @media (max-width: 768px) {
     nav { padding: 1rem 5vw; }
@@ -449,139 +421,123 @@
 </head>
 <body>
 
-  <!-- Background -->
   <div class="bg">
     <div class="glow"></div>
     <div class="glow"></div>
     <div class="glow"></div>
   </div>
 
-  <!-- Nav -->
   <nav>
     <div class="logo">Dada <span>&</span> Lala</div>
     <ul>
-      <li><a href="#story">Story</a></li>
+      <li><a href="#letter">Letter</a></li>
       <li><a href="#memories">Memories</a></li>
-      <li><a href="#brotherhood">Brotherhood</a></li>
+      <li><a href="#brotherhood">Us</a></li>
     </ul>
   </nav>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <header class="hero">
-    <div class="kicker">Since Day One</div>
+    <div class="kicker">Written by Lala · For Dada</div>
     <h1><span class="nick">Dada</span> <span class="amp">&</span> <span class="nick">Lala</span></h1>
     <div class="real-names"><strong>Umer Hassan</strong> &nbsp;·&nbsp; <strong>Muhammad Ibrahim</strong></div>
-    <p>Two cousins who grew up more like brothers. Sharing laughter, chaos, fights, and every stupid little moment that somehow became a memory we'll never let go of.</p>
+    <p>I'm Lala. This is Dada. We're cousins, but honestly — we're brothers. I made this page because I don't say this stuff out loud, and <em>you know I don't</em>. So here it is, in writing.</p>
     <div class="scroll-cue">Scroll</div>
   </header>
+
+  <!-- LETTER INTRO -->
+  <section id="letter" class="letter-intro reveal">
+    <p>Dada — you and I have been through everything together. Same childhood, same family gatherings, same <em>absolutely stupid</em> fights that ended in two minutes and then we were eating from the same plate again.</p>
+    <p>We laughed at people. Together. We'd catch each other's eyes in the middle of something and just <em>lose it</em>. Nobody else got the joke. That was the whole point.</p>
+    <p>So I made this. Not because it's your birthday. Not because anything happened. Just because you're Dada, and I'm Lala, and I don't think I've ever actually told you what that means to me.</p>
+    <p>So here it is. Read it. Don't make it weird.</p>
+    <div class="sign">— Lala</div>
+  </section>
 
   <!-- Nickname band -->
   <div class="nickname-band reveal">
     <div class="nick-box">
       <div class="nick">Dada</div>
       <div class="real">Umer Hassan</div>
-      <div class="who">— what Lala calls him</div>
+      <div class="who">— because I say so</div>
     </div>
     <div class="nick-arrow">↔</div>
     <div class="nick-box">
       <div class="nick">Lala</div>
       <div class="real">Muhammad Ibrahim</div>
-      <div class="who">— what Dada calls him</div>
+      <div class="who">— because he says so</div>
     </div>
   </div>
 
-  <!-- Story -->
-  <section id="story">
-    <div class="section-label">Our story</div>
-    <h2 class="section-title reveal">From childhood <span class="hl">till now</span></h2>
-    <div class="story-grid">
-      <div class="story-card reveal">
-        <div class="num">01</div>
-        <h3>Day One</h3>
-        <p>Before we even knew what friendship meant, Dada and Lala were already inseparable. Same family, same chaos, same childhood — different memories, one bond.</p>
-      </div>
-      <div class="story-card reveal">
-        <div class="num">02</div>
-        <h3>The Fights</h3>
-        <p>Oh, we fought. Over stupid things. Over toys, over turns, over nothing. And five minutes later we were back to laughing like nothing happened. That's how real brothers are.</p>
-      </div>
-      <div class="story-card reveal">
-        <div class="num">03</div>
-        <h3>The Laughs</h3>
-        <p>Our favorite hobby? Laughing at people. Together. One look, one inside joke, and we'd both lose it. Nobody else understood it — and that made it even funnier.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Memories -->
+  <!-- MEMORIES -->
   <section id="memories">
-    <div class="section-label">Little things</div>
-    <h2 class="section-title reveal">Memories that <span class="hl">hit different</span></h2>
+    <div class="section-label">The stuff I remember</div>
+    <h2 class="section-title reveal">Things only <span class="hl">we</span> would get</h2>
     <ul class="memory-list">
       <li class="reveal">
         <div class="emoji">😂</div>
         <div>
           <strong>Laughing at people together</strong>
-          <span>The classic Dada & Lala move. One of us would spot someone doing something normal, the other would catch the look, and we'd both be dying inside trying not to laugh out loud.</span>
+          <span>Our #1 activity. We'd be somewhere normal, spot someone doing something normal, and one look between us was enough. Both of us fighting for our lives trying not to laugh. Dada knows exactly what I'm talking about.</span>
         </div>
       </li>
       <li class="reveal">
         <div class="emoji">🥊</div>
         <div>
-          <strong>Random fights that lasted 2 minutes</strong>
-          <span>Someone grabbed something. Someone pushed someone. Then we were wrestling on the floor. Two minutes later, sharing snacks like nothing happened.</span>
+          <strong>The fights that lasted 2 minutes</strong>
+          <span>You grabbed something. I grabbed it back. Next thing we're rolling on the floor. Then 2 minutes later we're sharing snacks like nothing happened. Every single time. I don't even remember what most of those fights were about.</span>
         </div>
       </li>
       <li class="reveal">
         <div class="emoji">🕹️</div>
         <div>
-          <strong>Playing together till it got dark</strong>
-          <span>Games, running around outside, making up stupid rules — and always the last ones to go home. Every single time.</span>
+          <strong>Playing outside till it got dark</strong>
+          <span>Making up rules, changing them mid-game when one of us was losing, arguing over who cheated. And always, always, the last ones to go home. Every single day.</span>
         </div>
       </li>
       <li class="reveal">
         <div class="emoji">🤐</div>
         <div>
-          <strong>Secrets only Dada and Lala know</strong>
-          <span>Stuff we did that our families still don't know about. And never will. Because that's how it works.</span>
+          <strong>The stuff nobody knows</strong>
+          <span>Things Dada and I did that our families will never find out about. And I'm keeping it that way. If you're reading this, Dada — you know which ones. Take them to the grave.</span>
         </div>
       </li>
       <li class="reveal">
         <div class="emoji">🍔</div>
         <div>
-          <strong>Fighting over food, always</strong>
-          <span>Whose turn, who gets the bigger piece, who ate the last one — the eternal war. But we always shared in the end.</span>
+          <strong>The food wars</strong>
+          <span>Whose turn. Who got the bigger piece. Who ate the last one. We fought over food like it was our job. But somehow — we always split it in the end.</span>
         </div>
       </li>
       <li class="reveal">
         <div class="emoji">📞</div>
         <div>
-          <strong>Still got each other's back</strong>
-          <span>Years passed, life changed, but the bond? Untouched. Call it cousins. Call it brothers. Same thing.</span>
+          <strong>Still the same</strong>
+          <span>Years went by. Life got busy. But when I call Dada, it's like no time passed at all. Same jokes. Same nonsense. Same brother. That's the thing that never changes.</span>
         </div>
       </li>
     </ul>
   </section>
 
-  <!-- Big quote -->
+  <!-- BIG QUOTE -->
   <div class="big-quote reveal">
-    <p>Some people are family by blood. Dada is family by every stupid, hilarious, unforgettable memory he and Lala made together.</p>
-    <div class="who">— Lala, for Dada</div>
+    <p>Most people are just cousins. Dada is the guy I'd fight anyone for, and I know he'd do the same for me.</p>
+    <div class="who">— Lala</div>
   </div>
 
-  <!-- Brotherhood -->
+  <!-- BROTHERHOOD -->
   <section id="brotherhood">
-    <div class="section-label">Still going</div>
-    <h2 class="section-title reveal">The <span class="hl">brotherhood</span></h2>
-    <p class="reveal" style="color: var(--muted); max-width: 640px; margin-bottom: 1rem;">Years don't change what Dada and Lala have. We fought, we laughed, we grew up — and somehow, through all of it, we stayed the same two idiots we always were.</p>
+    <div class="section-label">Where we are now</div>
+    <h2 class="section-title reveal">Still <span class="hl">Dada & Lala</span></h2>
+    <p class="reveal" style="color: var(--muted); max-width: 680px; margin-bottom: 1rem;">Nothing has changed and nothing ever will. Same names. Same bond. Same two idiots who grew up laughing at everything together. If you're reading this, Dada — this one's for you, from Lala.</p>
     <div class="stats">
       <div class="stat reveal">
         <div class="big">∞</div>
-        <div class="label">Memories</div>
+        <div class="label">Memories we made</div>
       </div>
       <div class="stat reveal">
         <div class="big">1000+</div>
-        <div class="label">Fights (probably)</div>
+        <div class="label">Fights (I won most)</div>
       </div>
       <div class="stat reveal">
         <div class="big">1</div>
@@ -594,11 +550,11 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <div class="names">Dada & Lala</div>
     <div class="real">Umer Hassan &nbsp;·&nbsp; Muhammad Ibrahim</div>
-    <div>Brothers by blood, best friends by choice. <span id="year"></span></div>
+    <div>Written by Lala, for Dada. <span id="year"></span></div>
   </footer>
 
 <script>
